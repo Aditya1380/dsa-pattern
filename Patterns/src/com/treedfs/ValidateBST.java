@@ -3,18 +3,32 @@ package com.treedfs;
 public class ValidateBST {
 	public static void main(String[] args) {
         // Constructing our trap tree example:
-        //     5
+        //     6
         //    / \
-        //   1   4
+        //   1   5
         //      / \
-        //     3   6
+        //     4   3
         TreeNode invalidRoot = new TreeNode(5);
         invalidRoot.left = new TreeNode(1);
-        invalidRoot.right = new TreeNode(4);
-        invalidRoot.right.left = new TreeNode(2);
-        invalidRoot.right.right = new TreeNode(3);
+        invalidRoot.right = new TreeNode(6);
+        invalidRoot.right.left = new TreeNode(3);
+        invalidRoot.right.right = new TreeNode(4);
 
         System.out.println("Is trap tree a valid BST? " + isValidBST(invalidRoot)); // Output: false
+
+        // Constructing our trap tree example:
+        //     5
+        //    / \
+        //   2   7
+        //      / \
+        //     8   6
+        TreeNode validRoot1 = new TreeNode(5);
+        validRoot1.left = new TreeNode(2);
+        validRoot1.right = new TreeNode(7);
+        validRoot1.right.left = new TreeNode(6);
+        validRoot1.right.right = new TreeNode(8);
+
+        System.out.println("Is tree 1 a valid BST? " + isValidBST(validRoot1)); // Output: true
     }
 
 	public static boolean isValidBST(TreeNode root) {
