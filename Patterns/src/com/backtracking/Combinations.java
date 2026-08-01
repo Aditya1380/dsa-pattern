@@ -20,7 +20,8 @@ public class Combinations {
 
         // Step 2: Loop from startIndex up to n
         // Optimization: Stop loop early if not enough elements remain to reach size k
-        for (int i = startIndex; i <= n - (k - currentPath.size()) + 1; i++) {
+//        for (int i = startIndex; i <= n - (k - currentPath.size()) + 1; i++) {
+        for (int i = startIndex; i <= n; i++) {
             // STEP A: MAKE CHOICE
             currentPath.add(i);
 
