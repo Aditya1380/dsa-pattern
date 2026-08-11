@@ -1,7 +1,5 @@
 package com.mergeintervals;
 
-import java.util.Arrays;
-
 public class CarPooling {
 
 	public static boolean carPooling(int[][] trips, int capacity) {
